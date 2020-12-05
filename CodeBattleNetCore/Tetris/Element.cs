@@ -23,13 +23,37 @@ namespace TetrisClient
 {
 	public enum Element : short
 	{
+        /// <summary>
+        /// I
+        /// </summary>
 		BLUE =   (short)'I',
+        /// <summary>
+        /// J
+        /// </summary>
 		CYAN =   (short)'J',
+        /// <summary>
+        /// L
+        /// </summary>
 		ORANGE = (short)'L',
+        /// <summary>
+        /// O
+        /// </summary>
 		YELLOW = (short)'O',
+        /// <summary>
+        /// S
+        /// </summary>
 		GREEN =  (short)'S',
+        /// <summary>
+        /// T
+        /// </summary>
 		PURPLE = (short)'T',
+        /// <summary>
+        /// Z
+        /// </summary>
 		RED =    (short)'Z',
+        /// <summary>
+        /// .
+        /// </summary>
 		NONE =   (short)'.',
 	}
 }

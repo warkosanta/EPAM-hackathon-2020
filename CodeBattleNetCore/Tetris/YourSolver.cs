@@ -35,16 +35,7 @@ namespace TetrisClient
 		/// <summary>
 		/// Этот метод вызывается каждый игровой тик
 		/// </summary>
-		protected internal override Command Get(Board board)
-		{
-			// Код писать сюда!
-			return Command.DOWN;
-
-			// Команды можно комбинировать
-			/*
-			return Command.DOWN
-				.Then(Command.SUICIDE);
-			*/
-		}
-	}
+		protected internal override Command Get(Board board) => 
+            BotSolution.Player.MakeMove(board);
+    }
 }

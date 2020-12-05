@@ -31,20 +31,19 @@ namespace TetrisClient
 	{
 		private JsonBoard RawBoard;
 		private LengthToXY LengthXY;
-
 		/// <summary>
 		/// Размер игровой доски (размер доски Size x Size клеток)
 		/// </summary>
 		public int Size { get; private set; }
 
 		public Board(string boardString)
-		{
+        {
 			RawBoard = JsonConvert.DeserializeObject<JsonBoard>(boardString.Replace("\n", ""));
 			Size = (int)Math.Sqrt(RawBoard.Layers[0].Length);
 			LengthXY = new LengthToXY(Size);
 		}
 
-		/// <summary>
+        /// <summary>
 		/// Получить игровое поле в виде массива символов
 		/// </summary>
 		/// <returns></returns>
@@ -427,5 +426,5 @@ namespace TetrisClient
 
 			return sb.ToString();
 		}
-	}
+    }
 }
