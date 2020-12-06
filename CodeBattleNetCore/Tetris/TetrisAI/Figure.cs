@@ -62,13 +62,14 @@ namespace TetrisClient.BotSolution
                 var score = TetrisAI.GetMoveScore(board, a, b, c, d);
                 score += board.Size - landingPoint.Y;
 
-                snapshots.Add(new BestMoveDto(score, landingPoint, rotation));
-
                 foreach (var p in predict)
                 {
                     if (!board.IsOutOfField(p.X, p.Y))
                         board.Set(p.X, p.Y, '.');
                 }
+
+                snapshots.Add(new BestMoveDto(score, landingPoint, rotation));
+
             }
 
             return snapshots;
